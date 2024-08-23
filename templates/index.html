@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Car Price Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="Year">Year:</label>
+                <input type="number" class="form-control" id="Year" name="Year" placeholder="Enter year of purchase" required>
+            </div>
+            <div class="form-group">
+                <label for="Present_Price">Present Price (in lakhs):</label>
+                <input type="number" step="0.01" class="form-control" id="Present_Price" name="Present_Price" placeholder="Enter current showroom price" required>
+            </div>
+            <div class="form-group">
+                <label for="Kms_Driven">Kms Driven:</label>
+                <input type="number" class="form-control" id="Kms_Driven" name="Kms_Driven" placeholder="Enter number of kilometers driven" required>
+            </div>
+            <div class="form-group">
+                <label for="Fuel_Type">Fuel Type:</label>
+                <select class="form-control" id="Fuel_Type" name="Fuel_Type" required>
+                    <option value="0">Petrol</option>
+                    <option value="1">Diesel</option>
+                    <option value="2">CNG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Seller_Type">Seller Type:</label>
+                <select class="form-control" id="Seller_Type" name="Seller_Type" required>
+                    <option value="0">Dealer</option>
+                    <option value="1">Individual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Transmission">Transmission:</label>
+                <select class="form-control" id="Transmission" name="Transmission" required>
+                    <option value="0">Manual</option>
+                    <option value="1">Automatic</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Owner">Owner (Number of previous owners):</label>
+                <input type="number" class="form-control" id="Owner" name="Owner" placeholder="Enter number of previous owners" required>
+            </div>
+            <div class="form-group">
+                <label for="model_choice">Choose Model:</label>
+                <select class="form-control" id="model_choice" name="model_choice" required>
+                    <option value="Linear Regression">Linear Regression</option>
+                    <option value="Lasso">Lasso</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
